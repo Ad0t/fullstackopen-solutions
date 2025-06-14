@@ -18,37 +18,19 @@ const Footer = () => {
   )
 }
 
-const App1 = () => {
+const App = () => {
+  const friends = [
+    { name: 'Peter', age: 4 },
+    { name: 'Maya', age: 10 },
+  ]
+  const friends2 = [ 'Peter', 'Man']
+
   return (
     <div>
-      <h1>Greetings</h1>
-      <Hello name='Maya' age={26 + 10} />
-      <footer />
+      <p>{friends[0].name} {friends[0].age}</p>
+      <p>{friends[1].name} {friends[1].age}</p>
+      <p>{friends2}</p>
     </div>
-  )
-}
-
-// removing the div tag returns error. Alternative: Array of the components
-const App2 = () => {
-  return [
-    <h1>Greetings</h1>,
-    <Hello name='Maya' age={26 + 10} />,
-    <Footer />
-  ]
-}
-
-// Using Fragments <></>
-const App = () => {
-  const name = 'Peter'
-  const age = 10
-
-  return (
-    <>
-      <h1>Greetings</h1>
-      <Hello name='Maya' age={26 + 10} />
-      <Hello name={name} age={age} />
-      <Footer />
-    </>
   )
 }
 
