@@ -9,25 +9,46 @@ const Hello = (props) => {
     </div>
   )
 }
-const Hello2 = (props) => {
-  console.log(props)
+
+const Footer = () => {
   return (
     <div>
-      <p>Your friendly neighborhood {props.name} {props.sname}</p>
+      greeting app created by <a href='https://github.com/Ad0t'>Ad0t</a>
     </div>
   )
 }
 
-const App = () => {
-  const name = "Peter"
-  const sname = "Parker"
-  const age = 10
+const App1 = () => {
   return (
     <div>
       <h1>Greetings</h1>
-      <Hello name={name} sname='Man' age={age + 8}/>
-      <Hello2 name='Spider' sname={sname}/>
+      <Hello name='Maya' age={26 + 10} />
+      <footer />
     </div>
+  )
+}
+
+// removing the div tag returns error. Alternative: Array of the components
+const App2 = () => {
+  return [
+    <h1>Greetings</h1>,
+    <Hello name='Maya' age={26 + 10} />,
+    <Footer />
+  ]
+}
+
+// Using Fragments <></>
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+
+  return (
+    <>
+      <h1>Greetings</h1>
+      <Hello name='Maya' age={26 + 10} />
+      <Hello name={name} age={age} />
+      <Footer />
+    </>
   )
 }
 
