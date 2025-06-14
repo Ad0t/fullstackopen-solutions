@@ -1,22 +1,32 @@
 import './App.css'
-import { createElement } from 'react'
 
 // Practice 4
 const Hello = (props) => {
+  console.log(props)
   return (
     <div>
-      <p>Hello {props.name}</p>
+      <p>I am {props.name} {props.sname} of {props.age} years</p>
+    </div>
+  )
+}
+const Hello2 = (props) => {
+  console.log(props)
+  return (
+    <div>
+      <p>Your friendly neighborhood {props.name} {props.sname}</p>
     </div>
   )
 }
 
 const App = () => {
+  const name = "Peter"
+  const sname = "Parker"
+  const age = 10
   return (
     <div>
       <h1>Greetings</h1>
-      <Hello name='Jesus'/>
-      <Hello name='By Adele'/>
-      <Hello name='Anthony'/>
+      <Hello name={name} sname='Man' age={age + 8}/>
+      <Hello2 name='Spider' sname={sname}/>
     </div>
   )
 }
