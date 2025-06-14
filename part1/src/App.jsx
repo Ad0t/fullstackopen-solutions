@@ -1,13 +1,20 @@
 import './App.css'
 
-// Practice 1
+// Practice 2
 const App = () => {
-  console.log('Hello i am under the water')
+  const now = new Date()
+  const a = 10
+  const b = 20
+  console.log(now, a+b)
+
   return (
-      <div>
-        <p>Hello world</p>
-      </div>
-    )
+    <div>
+      <p>Hello world, it is {now.toString()}</p>
+      <p>
+        {a} plus {b} is {a + b}
+      </p>
+    </div>
+  )
 }
 
 export default App
